@@ -68,3 +68,11 @@ Create an IAM Role for EC2 to read the secret
 Inline policy (recommended)
 Replace <REGION>, <ACCOUNT_ID>, and secret name if different:
 #Check inline_policy.json in this folder 
+
+  4) Attach role to EC2:
+      EC2 → Instance → Actions → Security → Modify IAM role → select your role
+
+Part 4 — Bootstrap the EC2 app (User Data)
+In EC2 launch, you can paste this in User data (or run manually after SSH).
+Important: Replace SECRET_ID if you used a different name.
+#user.data.sh
